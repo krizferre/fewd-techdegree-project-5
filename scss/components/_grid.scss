@@ -10,7 +10,7 @@
 	padding: 0 40px 40px 40px;
 	
 	@include mq(desktop) {
-		padding: 0 150px 150px 150px;
+		padding: 0px 5% 5% 5%;
 	}
 }
 
@@ -28,13 +28,16 @@
 			@include flex() {
 				justify-content: space-between;
 			}
-
-			[class*="grid__col--9"] {
-				width: 600px;
-			}
 		
 			[class*="grid__col--4"] {
 				@include flex($direction: column);
+			}
+
+			[class*="grid__col--9"] {
+				@include flex {
+					justify-content: flex-end;
+				}
+				padding-right: 10%;
 			}
 
 			[class*="grid__col--12"] {
