@@ -1,0 +1,27 @@
+// ==========================================================================
+// Form Elements
+// ==========================================================================
+
+.form {
+
+  &__label {
+    &--hidden {
+      display: none;
+    }
+  }
+
+  &__input {
+    display: block;
+    border: none;
+    border-bottom: 5px solid $viking;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    @include mq(desktop) {
+      width: 80%;
+      display: initial;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+// ==========================================================================
+// Navigation
+// ==========================================================================
+
+.nav {
+  @include e(item) {
+
+    a {
+      display: block;
+      padding: 15px;
+      color: palette(grey, light);
+      text-decoration: none;
+
+      &:hover {
+        color: $white;
+        background-color: $viking;
+        border-radius: 5px;
+      }
+    }    
+  }
+
+  @include mq(desktop) {
+    display: flex;
+  }
+}
+
+.link {
+  text-decoration: none;
+  font-weight: bold;
+  color: lighten($scooter, 10%);
+}

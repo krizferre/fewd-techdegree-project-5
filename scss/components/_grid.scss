@@ -1,0 +1,78 @@
+// ==========================================================================
+// Grid
+// ==========================================================================
+
+[class^="grid__col--"] {
+  @extend %grid;
+}
+
+.container {
+	padding: 0 40px 40px 40px;
+	
+	@include mq(desktop) {
+		padding: 0 150px 150px 150px;
+	}
+}
+
+.grid {
+
+  &__row {
+		@extend .centered;
+		padding-top: 50px;
+
+		.centered [class*="grid__col--7"] {
+			@extend .centered;
+		}
+
+		@include mq(desktop) {
+			@include flex() {
+				justify-content: space-between;
+			}
+
+			[class*="grid__col--9"] {
+				width: 600px;
+			}
+		
+			[class*="grid__col--4"] {
+				@include flex($direction: column);
+			}
+
+			[class*="grid__col--12"] {
+				@include flex() {
+					justify-content: center;
+				}
+			}
+		}
+
+
+  }
+
+	@include mq(desktop) {
+
+		&__col {
+			@include g-columns;
+		}
+
+	}
+
+}
+
+// Grid display background colors
+
+$theme-grid: (
+	grid__col--12 : rgb(115, 235, 195),
+	grid__col--6  : rgb(97, 168, 185),
+	grid__col--4  : rgb(152, 232, 243),
+	grid__col--3  : rgb(230, 202, 247),
+	grid__col--5  : rgb(130, 219, 165),
+	grid__col--7  : rgb(218, 154, 154),
+	grid__col--8  : rgb(226, 162, 146),
+);
+
+// Generate Theme grid display classes
+
+@each $value, $color in $theme-grid {
+	.#{$value}.theme__colors {
+    background-color: $color;
+  }
+}

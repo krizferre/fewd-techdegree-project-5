@@ -1,0 +1,36 @@
+// ==========================================================================
+// Buttons
+// ==========================================================================
+
+[class^="btn--"] {
+  @extend %btn;
+
+  @include mq(desktop) {
+    margin: 20px;
+  }
+}
+
+[class^="btn--default"]:first-of-type {
+  @include mq(desktop) {
+    width: 90%;
+  }
+}
+
+// Button background colors
+
+$ui-colors: (
+  btn--default : $scooter,
+  btn--success : $emerald,
+  btn--error   : $sunglo,
+  btn--warning : $coral,
+  btn--info    : $purple-majesty
+);
+
+// Generate Theme button classes
+
+@each $value, $color in $ui-colors {
+	.#{$value}.theme__colors {
+    background-color: $color;
+  }
+}
+

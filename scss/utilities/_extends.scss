@@ -1,0 +1,43 @@
+// ==========================================================================
+// Placeholders
+// ==========================================================================
+
+// Clearfix
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// Center elements
+
+.centered {
+  text-align: center;
+  margin: auto;
+}
+
+%btn {
+  width: 100%;
+  color: $white;
+  border: none;
+  border-radius: $br--default;
+  padding: 10px;
+  margin-bottom: 20px;  
+  text-transform: uppercase;
+}
+
+%grid {
+  width: 100%;
+  color: palette(grey, dark);;
+  border: none;
+  border-radius: $br--default;
+  padding: 10px;
+  margin-top: 5px;  
+
+  p {
+    text-align: left;
+  }
+}
