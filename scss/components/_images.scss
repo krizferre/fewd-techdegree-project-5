@@ -6,11 +6,21 @@
 
   @include m(avatar) {
     padding-top: 20px;
+    max-width: 100%;
+
+    @include mq(desktop) {
+      padding-top: 0px;
+      margin: auto;
+    }
   }
 
   @include m(frame) {
-    width: 100%;
+    max-width: 100%;
     padding: 10px;
     border: 1px solid palette(grey, x-light);
+
+    @include mq(desktop) {
+      margin: auto;
+    }
   }
 }

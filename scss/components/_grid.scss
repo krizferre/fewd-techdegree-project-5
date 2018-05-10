@@ -33,6 +33,13 @@
 				@include flex($direction: column);
 			}
 
+			[class*="grid__col--6"] {
+				@include flex() {
+					align-items: center;
+					justify-content: center;
+				}
+			}
+			
 			[class*="grid__col--9"] {
 				@include flex {
 					justify-content: flex-end;
