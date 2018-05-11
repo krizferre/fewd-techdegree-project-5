@@ -34,8 +34,7 @@
 			}
 
 			[class*="grid__col--6"] {
-				@include flex() {
-					align-items: center;
+				@include flex {
 					justify-content: center;
 				}
 			}
